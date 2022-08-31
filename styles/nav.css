@@ -1,0 +1,211 @@
+/* cancel parent media witch hide the button toggle menu */
+@media screen and (min-width: 600px) {
+    button.menu-toggle {
+        display: block;
+    }
+}
+
+/* ------------------------------- Header top ------------------------- */
+/* header top with main menu mavigation, icon and search functionnality */
+.site-header .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border: 0.5px solid rgb(213, 213, 213);
+}
+
+/* logo */
+.site-header .header-top .custom-logo-link {
+    width: 155px;
+}
+.site-branding {
+    order: 2;
+}
+.site-branding .site-title {
+    display: none;
+}
+
+/* main-navigation */
+.menu-menu-principal-container {
+    display: flex;
+    justify-content: center;
+}
+.main-navigation.toggled > div > ul {
+    display: flex;
+    /* show menu list if active class toggled set in javascript */
+    height: 91.5%;
+    opacity: 1;
+}
+.menu-menu-principal-container > ul {
+    display: flex;
+    position: fixed;
+    top: 8.5%;
+    left: 0;
+    width: 100%;
+    background: black;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+     /* hidden menu list */
+     height: 0;
+     opacity: 0;
+    
+}
+.menu-menu-principal-container > ul > li {
+    opacity: 0;
+    padding: 1em 0 0 1em;
+    transform: translateY(20px);
+    letter-spacing: 5px;
+   
+}
+.menu-menu-principal-container > ul > li > a {
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-navigation {
+    width: fit-content;
+    order: 1;
+}
+button.menu-toggle {
+    width: 40px;
+    height: 34px;
+    background-image: url("../assets/menu.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* sub navigation */
+.toggleIcon {
+    color: white;
+    width: 10%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#primary-menu .sub-menu {
+    left: auto;
+    position: relative;
+    top:0;
+    height: 0;
+    overflow: hidden;
+    position: inherit;
+}
+#primary-menu .focus .sub-menu {
+    height: auto;
+}
+#primary-menu .sub-menu > li {
+    padding-top: 1em;
+}
+#primary-menu .sub-menu > li > a {
+    color: white;
+}
+
+
+
+/* search */
+
+/* search btn */
+.site-header .header-top .search-btn {
+    order: 3;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.site-header .header-top .search-btn img {
+    width: 30px;
+} 
+
+.custom_search_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 8.5%;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    background: black;
+    flex-direction: column;
+    gap: 5%;
+    opacity: 0;
+}
+/* show form modal, set active class in javascript */
+.custom_search_form.active {
+    height: 91.5%;
+    opacity: 1;
+}
+.custom_search_form > form {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    position: relative;
+    width: 80%;
+
+}
+/* show form with animation if active class present */
+.custom_search_form > form.active {
+    opacity: 1;
+}
+.custom_search_form > form > label {
+    width: 100%;
+}
+.search-submit {
+    display: none;
+}
+.btn-submit-search-form {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+}
+.btn-submit-search-form i {
+    color: white;
+    font-size: 25px;
+    color: grey;
+}
+.custom_search_form > form .search-field {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0.8em 2.5em;
+    width: 100%;
+    border-radius: 10px;
+    border: 0.5px solid grey;
+}   
+
+/* ----------------------------- Header second ------------------------- */
+/* header top with second menu mavigation */
+
+.menu-second-menu-container {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+.menu-second-menu-container > ul {
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 1em;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.menu-second-menu-container > ul > li > a {
+    font-size: 0.7em;
+    font-weight: 600;
+    text-transform:uppercase;
+}

@@ -1,0 +1,36 @@
+/*
+ Theme Name:   Vaguelette-child
+ Description:  Vaguelette child theme
+ Author:       Jimmy GANCI
+ Template:     vaguelette
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  vagueltte-child
+*/
+
+@import url("./styles/nav.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+ li a {
+    text-decoration: none;
+    color: black;
+ }
+  
+ /* hidden color if link visited */
+ li a:visited {
+    color: black;
+ }
+
+ /* to not allowed scroll on the site */
+ .noScroll {
+    height: 100vh;
+    overflow: hidden;
+ }
